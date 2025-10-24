@@ -1,0 +1,1 @@
+document.getElementById('demo').innerText ="It is the bible of JS";
