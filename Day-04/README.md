@@ -1,4 +1,4 @@
-**COde Snippet:**
+**Code Snippet:**
 ```js
 let day = "Monday";
 
@@ -15,6 +15,7 @@ switch (day) {
 
 **Because:**
 JavaScript is case-sensitive. The values `Monday` and `monday` are not same.The switch statement uses strict comparison (===). That means it matches both the type and the value (including case).
+
 
 
 
