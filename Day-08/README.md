@@ -23,5 +23,6 @@ getResult(8, 5);
 ```
 
 ### Create the GEC and FEC with CP and EP flow
-![alt text](Day-08\GEC_FEC.png)
+![alt text]([Day-08\GEC_FEC.png](https://github.com/NomanICT-IU/40DaysJS/blob/main/Day-08/GEC_FEC.png))
+
 
