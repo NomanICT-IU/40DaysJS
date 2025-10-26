@@ -22,7 +22,16 @@ function getResult(a, b) {
 getResult(8, 5);
 ```
 
-### Create the GEC and FEC with CP and EP flow
-![alt text]([Day-08\GEC_FEC.png](https://github.com/NomanICT-IU/40DaysJS/blob/main/Day-08/GEC_FEC.png))
 
+1. Create the GEC and FEC with CP and EP flow
+  ---
+![alt text](https://github.com/NomanICT-IU/40DaysJS/blob/d3e3b17d23647dc0a42a2b90fc19407af02d2d12/Day-08/task1.png)
+
+2.Create the Stack and Heap Flow
+  ---
+![alt text](https://github.com/NomanICT-IU/40DaysJS/blob/d3e3b17d23647dc0a42a2b90fc19407af02d2d12/Day-08/task2.png)
+
+2.Create the Stack Diagram
+  ---
+![alt text](https://github.com/NomanICT-IU/40DaysJS/blob/d3e3b17d23647dc0a42a2b90fc19407af02d2d12/Day-08/task3.png)
 
