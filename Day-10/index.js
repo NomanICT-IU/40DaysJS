@@ -95,12 +95,12 @@ outer();
 
 /**Task-10 */
 function counter() {
-    let count = 0;
-    return function () {
-        count--;
-        console.log(count);
-        console.log(count--);
-    };
+  let count = 0;
+  return function () {
+    count--;
+    console.log(count);
+    console.log(count--);
+  };
 }
 
 const reduce = counter();
