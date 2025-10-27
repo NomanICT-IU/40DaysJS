@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Design</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .counter-box {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 250px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .value {
+        font-size: 48px;
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .incrementBtn {
+         background-color: green;
+      }
+      .incrementBtn:hover {
+          background-color: darkgreen;
+      }
+       .decrementBtn {
+          background-color: rgb(204, 153, 0); 
+      }
+      .decrementBtn:hover {
+          background-color: rgb(255, 204, 0);
+      }
+       .resetBtn {
+          background-color: rgb(255, 0, 0); 
+      }
+      .resetBtn:hover {
+          background-color: rgb(200, 0, 0); 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counter-box">
+      <h2>Counter</h2>
+      <div id="value" class="value">0</div>
+      <p id="incrementBtn" class="btn incrementBtn">Increment</p>
+      <p id="decrementBtn" class="btn decrementBtn">Decrement</p>
+      <p id="resetBtn" class="btn resetBtn">Reset</p>
+    </div>
+
+    <script>
+      function countClick() {
+        let counterValue = document.getElementById("value");
+        let count = 0;
+        document
+          .getElementById("incrementBtn")
+          .addEventListener("click", () => {
+            counterValue.innerText = ++count;
+          });
+        document
+          .getElementById("decrementBtn")
+          .addEventListener("click", () => {
+            let decValue = --count;
+            if (decValue >= 0) {
+              counterValue.innerText = decValue;
+            } else {
+              count = 0;
+            }
+          });
+        document.getElementById("resetBtn").addEventListener("click", () => {
+          count = 0;
+          counterValue.innerText = count;
+        });
+      }
+      countClick();
+    </script>
+  </body>
+</html>
