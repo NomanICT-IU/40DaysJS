@@ -13,7 +13,7 @@ console.log(user.age ?? "Not provided");
 const obj = Object.freeze({ a: 1 });
 obj.a = 2;
 console.log(obj.a);
-// we can't  change the value of a. because using the freeze method makes the object immutable
+// we can't  change the value of a. because  using the freeze method makes the object immutable
 
 /**Task-6 */
 let booksCollection = {
@@ -25,34 +25,38 @@ let booksCollection = {
 };
 
 console.log(Object.keys(booksCollection)); // Object.keys() returns an array containing the keys of an object.s
-// [
-//   '1984',
-//   'Harry Potter',
-//   'The Hobbit',
-//   'The Alchemist',
-//   'To Kill a Mockingbird'
-// ]
+/**
+ [
+  '1984',
+  'Harry Potter',
+  'The Hobbit',
+  'The Alchemist',
+  'To Kill a Mockingbird'
+]
+ */
 
 console.log(Object.entries(booksCollection)); //Object.entries() returns an array of key–value pairs from an object.
-// [
-//   [ '1984', { author: 'George Orwell', price: 350, quantity: 8 } ],
-//   [
-//     'Harry Potter',
-//     { author: 'J.K. Rowling', price: 500, quantity: 5 }
-//   ],
-//   [
-//     'The Hobbit',
-//     { author: 'J.R.R. Tolkien', price: 400, quantity: 3 }
-//   ],
-//   [
-//     'The Alchemist',
-//     { author: 'Paulo Coelho', price: 450, quantity: 6 }
-//   ],
-//   [
-//     'To Kill a Mockingbird',
-//     { author: 'Harper Lee', price: 380, quantity: 0 }
-//   ]
-// ]
+/**
+ [
+  [ '1984', { author: 'George Orwell', price: 350, quantity: 8 } ],
+  [
+    'Harry Potter',
+    { author: 'J.K. Rowling', price: 500, quantity: 5 }
+  ],
+  [
+    'The Hobbit',
+    { author: 'J.R.R. Tolkien', price: 400, quantity: 3 }
+  ],
+  [
+    'The Alchemist',
+    { author: 'Paulo Coelho', price: 450, quantity: 6 }
+  ],
+  [
+    'To Kill a Mockingbird',
+    { author: 'Harper Lee', price: 380, quantity: 0 }
+  ]
+]
+ */
 
 /**Task-7 */
 //There are two method to check to check Object has certain property. One is (in) operator.Checks if a property exists anywhere in an object (including inherited ones).
