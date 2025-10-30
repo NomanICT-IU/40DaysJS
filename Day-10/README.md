@@ -31,7 +31,7 @@ add(5);
 add(10);
 console.log(total);
 ```
-Output: Bob <br>
+Output: 15;
 Because : The variable total are declare in global scope.on the other hand using let key word to declare a variable we can reassign value in this variable. Thas why after add(10) funtion call. the value of total change automatically.
  ---
  ## 3. Create a function with a nested function and log a variable from the parent function.
@@ -177,6 +177,7 @@ Output:
 - -2
 
 Explanation: <br> Beacuse of lexical scoping
+
 
 
 
