@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-51</title>
+  </head>
+  <body>
+    <h1>Example of Array like Object.</h1>
+    <div class="nodeList">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </div>
+    <script>
+      let nodeList = document.querySelectorAll("li");
+      console.log(Array.from(nodeList));//[li, li, li, li, li, li, li, li, li, li]
+    </script>
+  </body>
+</html>
