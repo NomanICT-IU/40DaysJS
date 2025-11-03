@@ -54,8 +54,8 @@ const mostRepeatedNumbers = Object.entries(count)
   .filter(([num, freq]) => freq === maxFreq)
   .map(([num]) => Number(num));
 console.log(
-  `Most repeated number(s): ${mostRepeatedNumbers} (appeared ${maxFreq} times)` //Most repeated number(s): 3,7 (appeared 3 times)
-);
+  `Most repeated number(s): ${mostRepeatedNumbers} (appeared ${maxFreq} times)` );//Most repeated number(s): 3,7 (appeared 3 times)
+
 
 /** T-058: Find the median of [5, 2, 9, 1, 3, 6, 8].*/
 const numberArray = [5, 2, 9, 1, 3, 6, 8].sort((a, b) =>

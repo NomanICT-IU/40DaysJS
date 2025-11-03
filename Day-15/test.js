@@ -30,5 +30,3 @@ const salaryMoreThan5000 = groupByDept.filter((dept) => {
   return dept.every((emp) => emp.salary > 5000);
 });
 console.log(salaryMoreThan5000);
-
-

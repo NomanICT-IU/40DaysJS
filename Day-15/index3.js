@@ -29,7 +29,7 @@ console.log(
   engineeringEmployees
 );
 
-/** T-021: Can you filter employees who work in the "Engineering" department? */
+/** T-022: Create a new array that combines employee names and department names in the format: "Alice (HR) */
 const combineEmployeesNames = employees.map((employeesInfo) => {
   const deptInfo = departments.find(
     (dept) => dept.id === employeesInfo.departmentId
