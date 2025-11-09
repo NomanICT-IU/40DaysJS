@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extract and Count Unique link from a page</title>
+    <script defer src="./uniqueLink.js"></script>
+  </head>
+  <body>
+    <div>
+      <p><a href="google.com">Goggle</a></p>
+      <p><a href="microsoft.com">Microsoft</a></p>
+      <p><a href="appale.com">Apple</a></p>
+      <p><a href="google.com">Goggle</a></p>
+      <p><a href="amazon.com">Amazon</a></p>
+      <p><a href="microsoft.com">Microsoft</a></p>
+    </div>
+    <br />
+    <br />
+    <button onclick="showUniqueLink()">Show Unique Link</button>
+    <br />
+    <br />
+    <div id="count"></div>
+  </body>
+</html>
