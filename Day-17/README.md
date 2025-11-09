@@ -77,8 +77,8 @@ function showZebraPattern() {
 }
 ```
 
-Output:
-
+**Output:** <br>
+![alt text](https://github.com/NomanICT-IU/40DaysJS/blob/2d34ab14eb32824784ee1326037ade419982df36/Day-17/task2.png)
 ---
 
 :white_check_mark: 3. Write different ways we can access DOM and what they returns
