@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Table</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table, td, th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    table { margin-top: 20px; width: 80%; }
+  </style>
+</head>
+<body>
+
+  <h2>Dynamic Table with Add, Delete & Search</h2>
+
+  <!-- Search -->
+  <input type="text" id="search" placeholder="Search by Name...">
+  <br><br>
+
+  <!-- Add Row Form -->
+  <form id="addForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="text" id="role" placeholder="Role" required>
+    <button type="submit">Add Row</button>
+  </form>
+
+  <!-- Table -->
+  <table id="dataTable">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Role</th>
+      <th>Action</th>
+    </tr>
+  </table>
+
+  <script>
+    const form = document.getElementById("addForm");
+    const table = document.getElementById("dataTable");
+    const searchInput = document.getElementById("search");
+
+    // Add Row
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const role = document.getElementById("role").value;
+
+      // Create new row
+      const row = table.insertRow(-1);  // add at end
+
+      const cell1 = row.insertCell(0);
+      const cell2 = row.insertCell(1);
+      const cell3 = row.insertCell(2);
+      const cell4 = row.insertCell(3);
+
+      cell1.textContent = name;
+      cell2.textContent = age;
+      cell3.textContent = role;
+
+      // Delete button
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "Delete";
+      delBtn.addEventListener("click", () => {
+        table.deleteRow(row.rowIndex);
+      });
+      cell4.appendChild(delBtn);
+
+      form.reset();
+    });
+
+    // Search Filter
+    searchInput.addEventListener("input", () => {
+      const filter = searchInput.value.toLowerCase();
+      const rows = table.getElementsByTagName("tr");
+
+      // Skip header row -> start from index 1
+      for (let i = 1; i < rows.length; i++) {
+        const nameCell = rows[i].getElementsByTagName("td")[0];
+
+        if (nameCell) {
+          const nameValue = nameCell.textContent.toLowerCase();
+          rows[i].style.display = nameValue.includes(filter) ? "" : "none";
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

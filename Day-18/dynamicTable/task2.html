@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="./task2.css" />
+    <script defer src="./task2.js"></script>
+  </head>
+  <body>
+    <h1>Dynamic Table with Add, Delete & Search</h1>
+    <!-- Search -->
+    <input type="text" id="search" placeholder="Search by Name...  " />
+    <br /><br />
+
+    <!-- Add Row Form -->
+    <form id="addForm">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input type="number" id="age" name="age" placeholder="Age" required />
+      <input type="text" id="role" name="role" placeholder="Role" required />
+      <input type="submit" value="Add Row" />
+    </form>
+
+    <!-- Table -->
+    <table id="tableHead">
+      <tbody id="tableBody">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

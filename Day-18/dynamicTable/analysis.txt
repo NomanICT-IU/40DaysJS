@@ -1,0 +1,108 @@
+/**
+ * Problem
+ * Add, delete, and search rows in a dynamic table
+ * A form to add rows (Name, Age, Role).
+ * Each row should have a “Delete” button to remove it
+ * Add a search input that filters the rows by name
+ * Use insertRow, deleteRow, and textContent/innerText
+ */
+
+/**
+ * Algorithm
+ * Take the data from the form
+ * Store the data in an array
+ * Add a new row to the table
+ * Delete the row when the delete button is clicked
+ * Filter the rows when typing in the search input
+ */
+
+/**
+ * Pseudocode
+ * start
+ * get form input value
+ * add values to storeDate array
+ * create a new  Table row
+ * insert values into table cells
+ * add delete button to the row
+ * if delete button clicked -> remove row and data
+ * if search input changes -> filter table row by name
+ * end
+ */
+
+/**
+*addRow()
+*deleteRow()
+*filterRow()
+*/
+
+
+const form = document.getElementById("addForm");
+const tableBody = document.getElementById("tableBody");
+const storeData = [];
+
+// Take data from the form
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const values = {};
+
+  // collect form inputs
+  const inputs = form.querySelectorAll("input");
+  inputs.forEach((input) => {
+    if (input.type !== "submit") {
+      values[input.name] = input.value;
+    }
+  });
+
+  storeData.push(values);
+  console.log(storeData);
+
+  // create new row
+  const tr = document.createElement("tr");
+
+  for (const key in values) {
+    const td = document.createElement("td");
+    td.textContent = values[key];
+    tr.appendChild(td);
+  }
+
+  // delete button column
+  const tdDelete = document.createElement("td");
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+
+  deleteBtn.addEventListener("click", () => {
+    tr.remove();
+
+    // remove from array
+    const index = storeData.indexOf(values);
+    if (index > -1) storeData.splice(index, 1);
+
+    console.log("Updated:", storeData);
+  });
+
+  tdDelete.appendChild(deleteBtn);
+  tr.appendChild(tdDelete);
+
+  tableBody.appendChild(tr);
+
+  form.reset();
+});
+
+// Search filter
+const search = document.getElementById("search");
+search.addEventListener("input", () => {
+  const filter = search.value.toLowerCase();
+
+  const rows = tableBody.querySelectorAll("tr");
+
+  rows.forEach((row) => {
+    const nameCell = row.querySelector("td"); // first cell (Name)
+
+    if (nameCell) {
+      const nameText = nameCell.textContent.toLowerCase();
+
+      row.style.display = nameText.includes(filter) ? " " : "none";
+    }
+  });
+});
