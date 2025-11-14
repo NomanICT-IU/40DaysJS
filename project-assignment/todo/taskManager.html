@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./taskManager.css" />
+    <script defer src="./taskManager.js"></script>
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+    <input type="text" id="inputTask" placeholder="New Task" />
+    <button id="toggleBtn" onclick="addTask()">Add Task</button>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search Task..."
+      onkeydown="filterTask()"
+    />
+    <ul id="taskList"></ul>
+    <p id="showAlert"></p>
+  </body>
+</html>
