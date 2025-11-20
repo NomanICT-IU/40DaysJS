@@ -1,6 +1,5 @@
 // get all buttons + result
 const buttons = document.querySelectorAll(".choice");
-const result = document.getElementById("result");
 
 // add single handler to all buttons
 buttons.forEach((btn) => {
@@ -38,7 +37,6 @@ function getResult(user, comp) {
 
 // print function
 function printFunction(userChoice, result, computerChoice) {
-  console.log(
-    `User Choice: ${userChoice.toUpperCase()}, Computer Choice : ${computerChoice.toUpperCase()} → ${result}`
-  );
+  document.getElementById("result").innerText = `User Choice: ${userChoice.toUpperCase()}, Computer Choice : ${computerChoice.toUpperCase()} → ${result}`;
 }
+

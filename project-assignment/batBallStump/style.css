@@ -4,13 +4,13 @@
   border: 1px solid orange;
   padding: 10px;
 }
-.divHead{
-    /* background-color: aquamarine; */
-    text-align: center;
+.divHead {
+  /* background-color: aquamarine; */
+  text-align: center;
 }
-.btnContainer{
+.btnContainer {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
- 
+  margin-bottom: 10px;
 }
