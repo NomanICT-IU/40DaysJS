@@ -128,6 +128,7 @@ let taskControllerObj = taskController(tasksList);
 //update the DOM
 const cardsItems = document.getElementById("card-container");
 
+const infoArray = [];
 tasksList.forEach((task) => {
   let { id, companyName, taskTitle, taskDes, deadlineDate } = task;
   const card = document.createElement("div");
@@ -161,16 +162,23 @@ tasksList.forEach((task) => {
       date.getMinutes().toString().padStart(2, "0") +
       ":" +
       date.getSeconds().toString().padStart(2, "0");
-    historyHandler({ id, taskTitle, time });
+    infoArray.push({ id: id, taskTitle: taskTitle, time: time });
+    historyHandler();
   });
 });
 const ulElement = document.querySelector(".history-list");
-function historyHandler(info) {
-  const liElement = document.createElement("li");
-  liElement.innerText = `You have completed the task "${info.taskTitle}" at ${info.time}`;
-  ulElement.appendChild(liElement);
+function historyHandler() {
+  ulElement.innerHTML = "";
+  infoArray.forEach((info) => {
+    const liElement = document.createElement("li");
+    liElement.innerText = `You have completed the task "${info.taskTitle}" at ${info.time}`;
+    ulElement.appendChild(liElement);
+  });
 }
 
 //clear history
 const btnElem = document.getElementById("historyBtn");
-btnElem.addEventListener("click", () => (ulElement.innerHTML = ""));
+btnElem.addEventListener("click", () => {
+  infoArray.length = 0;
+  ulElement.innerHTML = "";
+});
