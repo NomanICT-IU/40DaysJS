@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev-board</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script defer src="./src/js/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header section star here -->
+      <header class="header-container">
+        <nav>
+          <div class="nav-left">
+            <img src="./assets/logo.png" alt="brand logo" class="nav-logo" />
+            <div class="nav-band">Dev<span>Board</span></div>
+          </div>
+          <div class="nav-right">
+            <div class="all-task">
+              <img
+                src="./assets/checkbox.png"
+                alt="checkbox-logo"
+                class="checkbox-logo"
+              />
+              <div id="counter"></div>
+            </div>
+            <img
+              src="./assets/theme-btn.png"
+              alt="theme-btn"
+              class="theme-btn"
+            />
+          </div>
+        </nav>
+      </header>
+      <!-- header section end here -->
+
+      <!-- main section start here -->
+      <main class="main-container">
+        <!-- section start here -->
+        <section>
+          <!-- section header start here -->
+          <div class="section-header">
+            <div class="section-header-left">
+              <div class="checkBox-div">
+                <img
+                  src="./assets/checkbox.png"
+                  alt="section-checkBox"
+                  class="section-checkBox"
+                />
+              </div>
+              <div class="task-info">
+                <div class="task-counter-title">Task Assigned</div>
+                <div class="task-counter" id="task-counter"></div>
+              </div>
+            </div>
+            <div class="section-header-middle">
+              <img
+                src="./assets/board.png"
+                alt="task-board"
+                class="task-board"
+              />
+              <div class="discover">
+                Discover Something <br />
+                New Today!
+              </div>
+            </div>
+            <div class="section-header-left">
+              <div class="calender-div">
+                <img
+                  src="./assets/calender.png"
+                  alt="calender"
+                  class="calender"
+                />
+              </div>
+              <div class="date-info">
+                <div class="day"></div>
+                <div class="date"></div>
+              </div>
+            </div>
+          </div>
+          <!-- section header end here -->
+          <!-- card container start here -->
+          <div class="card-container" id="card-container">
+            <!-- card-1 -->
+            <!-- <div class="card">
+              <div class="company-name">ShopEase</div>
+              <div class="task-title">Fix Mobile Button Issue</div>
+              <div class="task-des-box">
+                <div class="task-des">
+                  Debug using Chrome DevTools, checks for overlapping.Debug using Chrome DevTools, checks for overlapping
+                </div>
+              </div>
+              <div class="task-footer">
+                <div class="deadline-info">
+                  <p class="deadline">Deadline</p>
+                  <p class="deadline-date">21 March 2025</p>
+                </div>
+                <button class="btn">Complete</button>
+              </div>
+            </div>
+          </div> -->
+          <!-- card container end here -->
+        </section>
+        <!-- section end here -->
+
+        <!-- aside start here -->
+        <aside>
+          <div class="activity-section">
+            <div class="activity-log">
+              <img src="./assets/activity.png" alt="activity logo" />
+              <p>Activity Log</p>
+            </div>
+            <button class="btn" id="historyBtn">Clear History</button>
+          </div>
+          <ul class="history-list">
+            
+          </ul>
+        </aside>
+        <!-- aside end here -->
+      </main>
+      <!-- main section start here -->
+    </div>
+
+  </body>
+</html>
